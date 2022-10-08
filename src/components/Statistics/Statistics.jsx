@@ -10,7 +10,6 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
           color: 'black',
           fontSize: '24px',
           fontWeight: '700',
-
           padding: '10px',
         }}
       >

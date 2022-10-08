@@ -1,12 +1,18 @@
 import styled from '@emotion/styled';
 
+export const Title = styled.h1`
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 0px;
+`;
+
 export const Wrapper = styled.div`
   width: 500px;
   margin-left: auto;
   margin-right: auto;
-  border: 3px solid black;
+  border: 1px dashed black;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
   background-color: #45d24b;
   border-radius: 20px;
 `;

@@ -3,7 +3,11 @@ import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
 
-import { Wrapper, Section } from './FeedbackOptions/FeedbackOptions.styled';
+import {
+  Wrapper,
+  Section,
+  Title,
+} from './FeedbackOptions/FeedbackOptions.styled';
 
 export class App extends Component {
   state = {
@@ -39,6 +43,7 @@ export class App extends Component {
 
     return (
       <>
+        <Title>Feedback book</Title>
         <Wrapper>
           <Section title="Please leave a feedback">
             <FeedbackOptions
