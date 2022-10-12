@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Title = styled.h1`
   text-align: center;
   font-style: italic;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 `;
 
 export const Wrapper = styled.div`
@@ -24,4 +24,14 @@ export const Section = styled.section`
   margin-left: auto;
   margin-right: auto;
   gap: 30px;
+`;
+
+export const Button = styled.button`
+  padding: 7px;
+  border: 1px dashed green;
+  border-radius: 10px;
+  background-color: mediumseagreen;
+  width: 150px;
+  gap: 20px;
+  cursor: pointer;
 `;

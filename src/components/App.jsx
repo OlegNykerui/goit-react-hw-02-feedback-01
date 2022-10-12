@@ -3,11 +3,7 @@ import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
 
-import {
-  Wrapper,
-  Section,
-  Title,
-} from './FeedbackOptions/FeedbackOptions.styled';
+import { Wrapper, Section, Title } from './Feedback.styled';
 
 export class App extends Component {
   state = {
@@ -45,26 +41,25 @@ export class App extends Component {
       <>
         <Title>Feedback book</Title>
         <Wrapper>
-          <Section title="Please leave a feedback">
+          <Title>Please leave a feedback</Title>
+          <Section>
             <FeedbackOptions
               options={feedback}
               onLeaveFeedback={this.onLeaveFeedback}
             />
           </Section>
 
-          <section title="Statistics">
-            {!total ? (
-              <Notification message="There is no feedback" />
-            ) : (
-              <Statistics
-                good={good}
-                neutral={neutral}
-                bad={bad}
-                total={total}
-                positivePercentage={positivePerc}
-              />
-            )}
-          </section>
+          {!total ? (
+            <Notification message="There is no feedback" />
+          ) : (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={total}
+              positivePercentage={positivePerc}
+            />
+          )}
         </Wrapper>
       </>
     );

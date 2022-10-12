@@ -1,25 +1,25 @@
+import PropTypes from 'prop-types';
+
+import { Button } from '../Feedback.styled';
+
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return options.map(buttonName => {
     return (
-      <button
+      <Button
         type="button"
         name={buttonName}
         onClick={onLeaveFeedback}
         key={buttonName}
-        style={{
-          padding: '7px',
-          border: ' 1px dashed green',
-          borderRadius: '10px',
-          backgroundColor: 'mediumseagreen',
-          width: '150px',
-          gap: '20px',
-          cursor: 'pointer',
-        }}
       >
         {buttonName}
-      </button>
+      </Button>
     );
   });
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired),
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;
