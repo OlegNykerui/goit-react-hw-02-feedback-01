@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
@@ -7,14 +8,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       <p>Neutral : {neutral}</p>
       <p>Bad : {bad}</p>
       <p>Total feedback: {total}</p>
-      <p
-        style={{
-          color: 'black',
-          fontSize: '24px',
-          fontWeight: '700',
-          padding: '10px',
-        }}
-      >
+      <p className={css.percentage}>
         Positive feedback : {positivePercentage} %{' '}
       </p>
     </div>
